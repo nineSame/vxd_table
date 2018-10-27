@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>鹰眼</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="bootstrap-4/js/bootstrap.min.js"></script>
+    <link type="text/css" rel="stylesheet" href="bootstrap-4/css/bootstrap.min.css">
+    <style>
+        .table {
+            width: 94%;
+            margin: 50px 3%;
+        }
+
+        caption {
+            caption-side: top;
+            border: 1px solid #dee2e6 ;
+            border-bottom: none;
+            padding-left: 20px;
+            font-weight: bold;
+            font-size: 1.5rem;
+            color: #000;
+        }
+
+
+    </style>
+</head>
+<body>
+    <table data-toggle="table" class="table table-bordered table-hover" id="table1">
+        <caption>酒店数据-汇总</caption>
+        <thead class="table-active">
+            <tr>
+                <th>月份</th>
+                <th>总销售额</th>
+                <th>客房销售额</th>
+                <th>预售券销售额</th>
+                <th>储值卡销售额</th>
+                <th>间夜数</th>
+                <th>预售券量</th>
+                <th>储值卡个数</th>
+            </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>06月</td>
+            <td>501183</td>
+            <td>0</td>
+            <td>501183</td>
+            <td>0</td>
+            <td>0</td>
+            <td>717</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>上月</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>去年本月</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table2">
+        <caption>酒店数据-分销渠道</caption>
+        <thead class="table-active">
+        <tr>
+            <th>销售渠道	</th>
+            <th>客房销售额</th>
+            <th>预售券销售额</th>
+            <th>储值卡销售额</th>
+            <th>总销售额</th>
+            <th>销售额占比</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>酒店员工</td>
+            <td>0</td>
+            <td>209001</td>
+            <td>0</td>
+            <td>209001</td>
+            <td>41.7%</td>
+        </tr>
+        <tr>
+            <td>酒店代理</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>酒店代理</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>小生活</td>
+            <td>0</td>
+            <td>9786</td>
+            <td>0</td>
+            <td>9786</td>
+            <td>2.0%</td>
+        </tr>
+        <tr>
+            <td>消费者传播</td>
+            <td>0</td>
+            <td>215991</td>
+            <td>0</td>
+            <td>215991</td>
+            <td>43.1%</td>
+        </tr>
+        <tr>
+            <td>官微</td>
+            <td>0</td>
+            <td>66405</td>
+            <td>0</td>
+            <td>66405</td>
+            <td>13.2%</td>
+        </tr>
+        <tr>
+            <td>联盟</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>总计</td>
+            <td>0</td>
+            <td>501183</td>
+            <td>0</td>
+            <td>501183</td>
+            <td>100%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table3">
+        <caption>用户复购数据</caption>
+        <thead class="table-active">
+        <tr>
+            <th>月份</th>
+            <th>新用户数</th>
+            <th>老用户数</th>
+            <th>总计</th>
+            <th>复购率</th>
+            <th>新用户购买额</th>
+            <th>老用户购买额</th>
+            <th>新用户购买额占比</th>
+            <th>老用户购买额占比</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>2018-06</td>
+            <td>371</td>
+            <td>0</td>
+            <td>371</td>
+            <td>0%</td>
+            <td>501183</td>
+            <td>0</td>
+            <td>100%</td>
+            <td>0%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table4">
+        <caption>预售券数据-分产品类型</caption>
+        <thead class="table-active">
+        <tr>
+            <th>产品类型</th>
+            <th>预售券量</th>
+            <th>销售额(GMV)</th>
+            <th>浏览量(pv)</th>
+            <th>转化率</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>0</td>
+            <td>717</td>
+            <td>501183</td>
+            <td>23907</td>
+            <td>3%</td>
+        </tr>
+        <tr>
+            <td>总计</td>
+            <td>717</td>
+            <td>501183</td>
+            <td>23907</td>
+            <td>3%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table5">
+        <caption>预售券数据-分产品</caption>
+        <thead class="table-active">
+        <tr>
+            <th>产品类型</th>
+            <th>预售券量</th>
+            <th>销售额(GMV)</th>
+            <th>浏览量(pv)</th>
+            <th>转化率</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>五号楼或八号楼双床房</td>
+            <td>717</td>
+            <td>501183</td>
+            <td>23907</td>
+            <td>3%</td>
+        </tr>
+        <tr>
+            <td>总计</td>
+            <td>717</td>
+            <td>501183</td>
+            <td>23907</td>
+            <td>3%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table6">
+        <caption>预售券数据-浏览量和访客量</caption>
+        <thead class="table-active">
+        <tr>
+            <th>月份</th>
+            <th>浏览量(PV)</th>
+            <th>访客量</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>06月</td>
+            <td>23907</td>
+            <td>13512</td>
+        </tr>
+        <tr>
+            <td>上个月</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>去年本月</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table7">
+        <caption>酒店员工销售数据-分部门</caption>
+        <thead class="table-active">
+        <tr>
+            <th>部门</th>
+            <th>销售量</th>
+            <th>销售额</th>
+            <th>销售额占比</th>
+            <th>浏览量</th>
+            <th>浏览量占比</th>
+            <th>转化率</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>前厅部</td>
+            <td>82</td>
+            <td>57318</td>
+            <td>27.42%</td>
+            <td>1277</td>
+            <td>10.09%</td>
+            <td>6.42%</td>
+        </tr>
+        <tr>
+            <td>营销部</td>
+            <td>60</td>
+            <td>41940</td>
+            <td>20.07%</td>
+            <td>3519</td>
+            <td>27.80%</td>
+            <td>1.71%</td>
+        </tr>
+        <tr>
+            <td>总计</td>
+            <td>299</td>
+            <td>209001</td>
+            <td>100%</td>
+            <td>12657</td>
+            <td>100%</td>
+            <td>2.36%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table8">
+        <caption>酒店员工销售数据-TOP20员工</caption>
+        <thead class="table-active">
+        <tr>
+            <th>部门</th>
+            <th>人员</th>
+            <th>销售量</th>
+            <th>销售额</th>
+            <th>销售额占比</th>
+            <th>浏览量</th>
+            <th>浏览量占比</th>
+            <th>转化率</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>前厅部</td>
+            <td>张三</td>
+            <td>34</td>
+            <td>23766</td>
+            <td>12.93%</td>
+            <td>963</td>
+            <td>10.11%</td>
+            <td>3.53%</td>
+        </tr>
+        <tr>
+            <td>营销部</td>
+            <td>李四</td>
+            <td>31</td>
+            <td>21669</td>
+            <td>11.79%</td>
+            <td>3794</td>
+            <td>39.84%</td>
+            <td>0.82%</td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <br/><br/><br/>
+    <h3>预售产品鹰眼内容如下</h3>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table9">
+        <caption>产品数据-汇总</caption>
+        <thead class="table-active">
+        <tr>
+            <th>状态</th>
+            <th>浏览量</th>
+            <th>访客量</th>
+            <th>销售量</th>
+            <th>销售转化率</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>预热期</td>
+            <td>9771</td>
+            <td>6398</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>售卖期</td>
+            <td>14790</td>
+            <td>8211</td>
+            <td>717</td>
+            <td>4.85%</td>
+        </tr>
+        <tr>
+            <td>售后期</td>
+            <td>2163</td>
+            <td>1043</td>
+            <td>-</td>
+            <td>-</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table10">
+        <thead class="table-active">
+        <tr>
+            <th>销售额</th>
+            <th>奖励金额</th>
+            <th>奖金比例</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>501183</td>
+            <td>25040</td>
+            <td>5%</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table11">
+        <caption>用户复购数据-产品维度</caption>
+        <thead class="table-active">
+        <tr>
+            <th>用户类型</th>
+            <th>用户数</th>
+            <th>购买金额</th>
+            <th>购买量</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>新用户</td>
+            <td>371</td>
+            <td>501183</td>
+            <td>717</td>
+        </tr>
+        <tr>
+            <td>老用户</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>复购率</td>
+            <td>0</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table data-toggle="table" class="table table-bordered table-hover" id="table12">
+        <caption>销售渠道核心过程数据</caption>
+        <thead class="table-active">
+        <tr>
+            <th>销售渠道</th>
+            <th>注册人数</th>
+            <th>绑定微信人数</th>
+            <th>绑定微信率</th>
+            <th>转发人数</th>
+            <th>有销售量人数</th>
+            <th>转发有效率</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>酒店员工</td>
+            <td>424</td>
+            <td>132</td>
+            <td>31.13%</td>
+            <td>126</td>
+            <td>38</td>
+            <td>30.16</td>
+        </tr>
+        <tr>
+            <td>代理</td>
+            <td>2</td>
+            <td>3</td>
+            <td>150%</td>
+            <td>2</td>
+            <td>0</td>
+            <td>0</td>
+        </tr>
+        <tr>
+            <td>消费者传播</td>
+            <td>-</td>
+            <td>-</td>
+            <td>-</td>
+            <td>559</td>
+            <td>112</td>
+            <td>20.4%</td>
+        </tr>
+        <tr>
+            <td>总计</td>
+            <td>426</td>
+            <td>135</td>
+            <td>31.69%</td>
+            <td>687</td>
+            <td>150</td>
+            <td>21.83%</td>
+        </tr>
+
+        </tbody>
+    </table>
+</body>
+</html>
